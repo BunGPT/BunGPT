@@ -1,0 +1,16 @@
+include README.md
+include LICENSE
+include pyproject.toml
+include MANIFEST.in
+
+recursive-include bungpt *.py
+recursive-include bungpt *.typed
+recursive-include configs *.yaml *.yml *.json
+recursive-include examples *.py
+recursive-include docs *.md *.rst
+
+global-exclude __pycache__
+global-exclude *.py[co]
+global-exclude .DS_Store
+global-exclude *.so
+global-exclude .git*

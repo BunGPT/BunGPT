@@ -4,10 +4,10 @@ import os
 from pathlib import Path
 from typing import Any, Dict, Optional, Union
 
-from pydantic import BaseSettings, Field
+from pydantic import BaseModel, Field
 
 
-class Config(BaseSettings):
+class Config(BaseModel):
     """Main configuration class for BunGPT."""
 
     # Model configuration
