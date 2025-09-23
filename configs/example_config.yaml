@@ -1,0 +1,42 @@
+# Example configuration file for BunGPT
+# This file demonstrates various configuration options
+
+# Model configuration
+model:
+  name: "bungpt-default"
+  path: null  # Set to your model path, e.g., "/path/to/model" or "huggingface/model-name"
+  device: "auto"  # auto, cpu, cuda, cuda:0, etc.
+  precision: "float16"  # float16, float32, int8, int4
+  max_length: 2048
+
+# API server configuration
+api:
+  host: "localhost"
+  port: 8000
+  workers: 1
+  api_key: null  # Set to require API key authentication
+  allowed_hosts:
+    - "*"
+
+# Logging configuration
+logging:
+  level: "INFO"  # DEBUG, INFO, WARNING, ERROR, CRITICAL
+  format: "%(asctime)s - %(name)s - %(levelname)s - %(message)s"
+  file: null  # Set to log to a file
+
+# Tool configuration
+tools:
+  enable_browser_tool: false
+  enable_python_tool: false
+  enable_code_tool: false
+
+# Cache configuration
+cache:
+  dir: "~/.cache/bungpt"
+  enable: true
+
+# Security configuration
+security:
+  api_key: null
+  allowed_hosts:
+    - "*"
